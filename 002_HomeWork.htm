@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <script type="text/javascript">
+var n = prompt ("Введите размерность массива:", "");
+var min = prompt ("Введите минимальный элемент", "");
+var max = prompt ("Введите максимальный элемент", "");
+var arr = new Array();
+var sum = 0;
+var sa;
+      
+ for (i=0; i<n; i++)
+  {
+ arr[i] = Math.floor(Math.random() * (max-min+1)+min); 
+ sum += arr[i];                
+  }
+        
+ var maxval = arr[0];
+ var minval = arr[0];
+ 
+ for (i=0; i<n; i++)
+  {
+ if (arr[i] > maxval) maxval = arr[i];
+ if (arr[i] < minval) minval = arr[i];
+  }
+        
+var rez = arr.join(", ");
+        
+  document.write ("Изначальный массив: " + rez + "<hr>");
+  document.write ("Максимальное значение: " + maxval + "<hr>");
+  document.write ("Минимальное значение: " + minval + "<hr>");
+  document.write ("Сумма: " + sum + "<hr>");
+  document.write ("Среднее: " + sum/n + "<hr>");
+        
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
